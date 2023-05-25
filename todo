@@ -1,7 +1,2 @@
-print a table with random values. the random values should not repeat itself
-
-Replace the value with 0 if matched. If 0 display x
-
-range 0-50
-
-store in array
+Add diagonal checking
+Store used/guessed numbers in a seperate array
