@@ -20,6 +20,13 @@ def checkrow(arr):
         unique_elements = set(i)
         if len(unique_elements) == 1:
             return True
-        else: 
-            return False
+    return False
 
+def checkcolumn(arr):
+    row,column = np.shape(arr)
+    for i in range(column):
+        col = arr[:,i]
+        unique_elements = set(col)
+        if len(unique_elements)==1:
+            return True
+    return False

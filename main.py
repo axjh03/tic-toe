@@ -2,8 +2,7 @@
 import random
 #import numpy
 import numpy as np
-from modules import printtable
-from modules import checkrow
+from modules import printtable,checkrow,checkcolumn
 
 rangeFlag = 1
 #table = random.sample(inputNumbers, rowAndCol**2)
@@ -44,6 +43,9 @@ while game_alive == True:
         
     if (checkrow(np_table_2d) == True):
         print("Row completed! Game Over. \n Thank You for playing this game.")
+        break
+    if (checkcolumn(np_table_2d) == True):
+        print("Column completed! Game Over. \n Thank You for playing this game.")
         break
     
     
