@@ -35,19 +35,19 @@ while game_alive == True:
     choice = 0
     while choice == 0:
         choice = np.random.choice(np_table)
-    usrChoice_str = str(input(f"Do you have the number {choice}?    "))
+    usrChoice_str = str(input(f"Do you have the number {choice}?  "))
     usrChoice_str = usrChoice_str.lower()
     if usrChoice_str[0] == "y":
         indx = np.where(np_table_2d == choice)
         np_table_2d[indx] = 0
         
     if (checkrow(np_table_2d) == True):
+        printtable(np_table_2d, rowAndCol)
         print("Row completed! Game Over. \n Thank You for playing this game.")
         break
     if (checkcolumn(np_table_2d) == True):
+        printtable(np_table_2d, rowAndCol)
         print("Column completed! Game Over. \n Thank You for playing this game.")
         break
-    
-    
     printtable(np_table_2d, rowAndCol)
     print("\n")
